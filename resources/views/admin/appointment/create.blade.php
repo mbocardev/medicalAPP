@@ -8,8 +8,8 @@
                 <div class="page-header-title">
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
-                        <h5>Doctor Appointments</h5>
-                        <span>Choose your available time for appointments</span>
+                        <h5>Rendez-Vous Docteur</h5>
+                        <span>Choisissez le temps</span>
                     </div>
                 </div>
             </div>
@@ -19,8 +19,8 @@
                         <li class="breadcrumb-item">
                             <a href="../index.html"><i class="ik ik-home"></i></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="#">Available time</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Create</li>
+                        <li class="breadcrumb-item"><a href="#">Disponible</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Créer</li>
                     </ol>
                 </nav>
             </div>
@@ -46,7 +46,7 @@
                 @csrf
                 <div class="card">
                     <div class="card-header">
-                        <h3>Choose A Date</h3>
+                        <h3>Choisir une Date</h3>
                     </div>
                     <div class="card-body">
                         <input type="text" class="form-control datetimepicker-input" id="datepicker"
@@ -56,8 +56,8 @@
 
                 <div class="card">
                     <div class="card-header">
-                        Choose AM Time
-                        <span class="ml-auto">Check/Uncheck
+                        Choisir une Heure
+                        <span class="ml-auto">Selectionner/Deselectionner
                             <input type="checkbox"
                                 onclick=" for(c in document.getElementsByName('time[]')) document.getElementsByName('time[]').item(c).checked=this.checked">
                         </span>
@@ -116,7 +116,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        Choose PM Time
+                        Choisir heure AM
                     </div>
                     <div class="card-body">
 
@@ -190,7 +190,7 @@
                 </div>
                 <div class="card">
                     <div class="card-body">
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary">Soumettre</button>
                     </div>
                 </div>
             </form>

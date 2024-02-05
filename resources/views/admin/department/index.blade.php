@@ -8,8 +8,8 @@
                 <div class="page-header-title">
                     <i class="ik ik-inbox bg-blue"></i>
                     <div class="d-inline">
-                        <h5>Departments</h5>
-                        <span>The List of All Departments</span>
+                        <h5>Departements</h5>
+                        <span>Liste des departements</span>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                             <a href="../index.html"><i class="ik ik-home"></i></a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#">Department</a>
+                            <a href="#">Departement</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Index</li>
                     </ol>
@@ -39,7 +39,7 @@
             @endif
             <div class="card">
                 <div class="card-header">
-                    <h3>All Departments</h3>
+                    <h3>Tous les Departements</h3>
 
                 </div>
                 <div class="card-body">
@@ -47,7 +47,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Name</th>
+                                <th>Nom</th>
 
                                 <th class="nosort">&nbsp;</th>
                                 <th class="nosort">&nbsp;</th>
@@ -80,7 +80,7 @@
                                 @endforeach
 
                             @else
-                                <td>No Department. Please create one.</td>
+                                <td>Pas de Departement. Créez en une</td>
                             @endif
 
                         </tbody>

@@ -8,8 +8,8 @@
                 <div class="page-header-title">
                     <i class="ik ik-inbox bg-blue"></i>
                     <div class="d-inline">
-                        <h5>Doctors</h5>
-                        <span>List of All Doctors</span>
+                        <h5>Docteurs</h5>
+                        <span>Liste des docteurs</span>
                     </div>
                 </div>
             </div>
@@ -20,7 +20,7 @@
                             <a href="../index.html"><i class="ik ik-home"></i></a>
                         </li>
                         <li class="breadcrumb-item">
-                            <a href="#">Doctors</a>
+                            <a href="#">Docteurs</a>
                         </li>
                         <li class="breadcrumb-item active" aria-current="page">Index</li>
                     </ol>
@@ -42,12 +42,12 @@
                     <table id="data_table" class="table">
                         <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>Nom</th>
                                 <th class="nosort">Avatar</th>
                                 <th>Email</th>
-                                <th>Address</th>
-                                <th>Phone number</th>
-                                <th>Department</th>
+                                <th>Adresse</th>
+                                <th>Telephone</th>
+                                <th>Departement</th>
                                 <th class="nosort">&nbsp;</th>
                                 <th class="nosort">&nbsp;</th>
                             </tr>
@@ -87,7 +87,7 @@
                                 @endforeach
 
                             @else
-                                <td>No user to display</td>
+                                <td>Aucun à afficher</td>
                             @endif
 
                         </tbody>

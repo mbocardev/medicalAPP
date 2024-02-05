@@ -45,7 +45,7 @@ class DoctorController extends Controller
         $data['password'] = bcrypt($request->password);
         User::create($data);
 
-        return redirect()->back()->with('message', 'Doctor added successfully');
+        return redirect()->back()->with('message', 'Docteur ajouté avec succes');
     }
 
     /**
@@ -97,7 +97,7 @@ class DoctorController extends Controller
             $data['password'] = $userPassword;
         }
         $user->update($data);
-        return redirect()->route('doctor.index')->with('message', 'Doctor ' . $user->name . ' information updated successfully');
+        return redirect()->route('doctor.index')->with('message', ' Information du Docteur ' . $user->name . '  mis à jour avec succès');
     }
 
     /**
@@ -117,7 +117,7 @@ class DoctorController extends Controller
         if ($userDelete) {
             unlink(public_path('images/' . $user->image));
         };
-        return redirect()->route('doctor.index')->with('message', 'Doctor ' . $user->name . ' deleted successfully');
+        return redirect()->route('doctor.index')->with('message', 'Docteur ' . $user->name . ' supprimé succès');
     }
 
     public function validateStore($request)

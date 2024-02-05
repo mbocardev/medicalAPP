@@ -20,12 +20,12 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Photo</th>
                                     <th scope="col">Date</th>
-                                    <th scope="col">User</th>
+                                    <th scope="col">Patient</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Gender</th>
+                                    <th scope="col">Telephone</th>
+                                    <th scope="col">Genre</th>
 
-                                    <th scope="col">Doctor</th>
+                                    <th scope="col">Docteur</th>
 
                                     <th scope="col">Prescription</th>
                                 </tr>
@@ -50,18 +50,18 @@
                 ->exists())
                                                 <button type="button" class="btn btn-primary" data-toggle="modal"
                                                     data-target="#exampleModal{{ $booking->user_id }}">
-                                                    Prescribe
+                                                    Prescrire
                                                 </button>
                                                 @include('prescription.form')
 
                                             @else
                                                 <a href="{{ route('prescription.show', [$booking->user_id, $booking->date]) }}"
-                                                    class="btn btn-info">View</a>
+                                                    class="btn btn-info">Voir</a>
                                             @endif
                                         </td>
                                     </tr>
                                 @empty
-                                    <td>There is no patient!</td>
+                                    <td>Il n' y a pas de Patient!</td>
                                 @endforelse
 
                             </tbody>

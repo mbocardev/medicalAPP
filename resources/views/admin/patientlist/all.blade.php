@@ -6,12 +6,12 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        Total Appointments: {{ $bookings->count() }}
+                        Total Rendez-Vous: {{ $bookings->count() }}
                     </div>
                     <form action="{{ route('patients') }}" method="GET">
 
                         <div class="card-header">
-                            Filter by Date: &nbsp;
+                            Filtrer par Date: &nbsp;
                             <div class="row">
                                 <div class="col-md-10 col-sm-6">
                                     <input type="text" class="form-control datetimepicker-input" id="datepicker"
@@ -19,7 +19,7 @@
                                         placeholder=@isset($date) {{ $date }} @endisset>
                                 </div>
                                 <div class="col-md-2 col-sm-6">
-                                    <button type="submit" class="btn btn-primary">Search</button>
+                                    <button type="submit" class="btn btn-primary">Rechercher</button>
                                 </div>
                             </div>
 
@@ -33,13 +33,13 @@
                                     <th scope="col">#</th>
                                     <th scope="col">Photo</th>
                                     <th scope="col">Date</th>
-                                    <th scope="col">User</th>
+                                    <th scope="col">Patient</th>
                                     <th scope="col">Email</th>
-                                    <th scope="col">Phone</th>
-                                    <th scope="col">Gender</th>
-                                    <th scope="col">Time</th>
-                                    <th scope="col">Doctor</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">telephone</th>
+                                    <th scope="col">Genre</th>
+                                    <th scope="col">heure</th>
+                                    <th scope="col">Docteur</th>
+                                    <th scope="col">Etat</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -58,16 +58,16 @@
                                         <td>
                                             @if ($booking->status == 0)
                                                 <a href="{{ route('update.status', [$booking->id]) }}"><button
-                                                        class="btn btn-warning">Pending</button></a>
+                                                        class="btn btn-warning">En attente</button></a>
                                             @else
                                                 <a href="{{ route('update.status', [$booking->id]) }}"><button
-                                                        class="btn btn-success">Checked-In</button></a>
+                                                        class="btn btn-success">Validé</button></a>
                                             @endif
                                         </td>
 
                                     </tr>
                                 @empty
-                                    <td>There is no appointment!</td>
+                                    <td>Il n'y a pas de Rendez-Vous!</td>
                                 @endforelse
 
                             </tbody>

@@ -54,7 +54,7 @@ class AppointmentController extends Controller
                 // default status => 0
             ]);
         }
-        return redirect()->back()->with('message', 'An appointment created for ' . $request->date);
+        return redirect()->back()->with('message', 'Rendez Vous créé pour le ' . $request->date);
     }
 
     /**
@@ -108,7 +108,7 @@ class AppointmentController extends Controller
         $date = $request->date;
         $appointment = Appointment::where('date', $date)->where('user_id', auth()->user()->id)->first();
         if (!$appointment) {
-            return redirect()->to('/appointment')->with('errMessage', 'Appointment time is not available for this date');
+            return redirect()->to('/appointment')->with('errMessage', 'Heure Indisponible pour cette date');
         };
         $appointmentId = $appointment->id;
         $times = Time::where('appointment_id', $appointmentId)->get();
@@ -128,6 +128,6 @@ class AppointmentController extends Controller
                 'status' => 0
             ]);
         }
-        return redirect()->route('appointment.index')->with('message', 'Appointment time for ' . $date . ' is updated successfully!');
+        return redirect()->route('appointment.index')->with('message', 'Heure de Rendez-Vous pour le ' . $date . 'mis à jour avec succès!');
     }
 }

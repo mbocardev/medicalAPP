@@ -22,7 +22,7 @@
                             <input type="text" name="name_of_disease" class="form-control" required>
                         </div>
                         <div class="form-group">
-                            <label>Symptoms</label>
+                            <label>Symptomes</label>
 
                             <textarea name="symptoms" class="form-control" placeholder="" required></textarea>
                         </div>
@@ -33,11 +33,11 @@
 
                         </div>
                         <div class="form-group">
-                            <label>Usage Instruction</label>
+                            <label>Instruction d'Usage </label>
                             <textarea name="usage_instruction" class="form-control" placeholder="" required></textarea>
                         </div>
                         <div class="form-group">
-                            <label>Feedback</label>
+                            <label>Retour</label>
                             <textarea name="feedback" class="form-control" placeholder="" required></textarea>
                         </div>
                         <div class="form-group">
@@ -48,8 +48,8 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                        <button type="submit" class="btn btn-primary">Enregistrer</button>
                     </div>
                 </div>
             </form>

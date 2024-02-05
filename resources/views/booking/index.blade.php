@@ -5,18 +5,18 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">My appointments: {{ $appointments->count() }}</div>
+                    <div class="card-header">Mes Rendez-Vous: {{ $appointments->count() }}</div>
 
                     <div class="card-body table-responsive-sm">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Doctor</th>
-                                    <th scope="col">Time</th>
-                                    <th scope="col">Date for</th>
-                                    <th scope="col">Created date</th>
-                                    <th scope="col">Status</th>
+                                    <th scope="col">Docteur</th>
+                                    <th scope="col">Heure</th>
+                                    <th scope="col">Pour le</th>
+                                    <th scope="col">Date créé</th>
+                                    <th scope="col">Etat</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -29,14 +29,14 @@
                                         <td>{{ $appointment->created_at->format('m-d-yy') }}</td>
                                         <td>
                                             @if ($appointment->status == 0)
-                                                <p>Not Visited</p>
+                                                <p>Non Visité</p>
                                             @else
-                                                <p>Checked-In</p>
+                                                <p>Observé</p>
                                             @endif
                                         </td>
                                     </tr>
                                 @empty
-                                    <td>You have no any appointments</td>
+                                    <td>Vous n'avez pas de Rendez-Vous</td>
                                 @endforelse
 
                             </tbody>

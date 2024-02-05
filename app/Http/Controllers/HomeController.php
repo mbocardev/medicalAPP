@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Department;
+use App\User;
 use Illuminate\Http\Request;
 use Auth;
 
@@ -28,6 +30,14 @@ class HomeController extends Controller
         if (Auth::user()->role->name == 'admin' || Auth::user()->role->name == 'doctor') {
             return redirect()->to('/dashboard');
         };
-        return view('home');
+
+        $depar= Department::count();
+        $departments = Department::all();
+        $doctors = User::whereHas('role', function ($query) {
+            $query->where('name', 'doctor');
+        })->get();
+
+        return view('home',
+        ['dep'=>$depar ,'doctors' => $doctors], compact('departments'));
     }
 }

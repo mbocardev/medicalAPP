@@ -28,7 +28,7 @@
                     <div class="widget-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="state">
-                                <h6>Doctors</h6>
+                                <h6>Docteurs</h6>
                                 <h2>{{ App\User::where('role_id', 1)->count() }}</h2>
                             </div>
                             <div class="icon">
@@ -68,7 +68,7 @@
                     <div class="widget-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="state">
-                                <h6>Booking</h6>
+                                <h6>Reservation</h6>
                                 <h2>{{ App\Booking::count() }}</h2>
                             </div>
                             <div class="icon">
@@ -89,7 +89,7 @@
                     <div class="widget-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="state">
-                                <h6>Prescription</h6>
+                                <h6>Prescriptions</h6>
                                 <h2>{{ App\Prescription::count() }}</h2>
                             </div>
                             <div class="icon">
@@ -110,7 +110,7 @@
                     <div class="widget-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="state">
-                                <h6>Department</h6>
+                                <h6>Departments</h6>
                                 <h2>{{ App\Department::count() }}</h2>
                             </div>
                             <div class="icon">

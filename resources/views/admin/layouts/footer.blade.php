@@ -1,10 +1,9 @@
 <footer class="footer">
     <div class="w-100 clearfix">
-        <span class="text-center text-sm-left d-md-inline-block">Copyright © 2018 ThemeKit v2.0. All Rights
-            Reserved.</span>
-        <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Crafted with <i
+        <span class="text-center text-sm-left d-md-inline-block">Projet BDA © 2024 </span>
+        {{-- <span class="float-none float-sm-right mt-1 mt-sm-0 text-center">Crafted with <i
                 class="fa fa-heart text-danger"></i> by <a href="http://lavalite.org/" class="text-dark"
-                target="_blank">Lavalite</a></span>
+                target="_blank">Lavalite</a></span> --}}
     </div>
 </footer>
 
@@ -24,7 +23,7 @@
                     <div class="row">
                         <div class="col-md-4 ml-auto mr-auto">
                             <div class="input-wrap">
-                                <input type="text" id="quick-search" class="form-control" placeholder="Search..." />
+                                <input type="text" id="quick-search" class="form-control" placeholder="Rechercher..." />
                                 <i class="ik ik-search"></i>
                             </div>
                         </div>
@@ -35,7 +34,7 @@
                 <div class="container">
                     <div class="apps-wrap">
                         <div class="app-item">
-                            <a href="#"><i class="ik ik-bar-chart-2"></i><span>Dashboard</span></a>
+                            <a href="#"><i class="ik ik-bar-chart-2"></i><span>Tableau de Bord</span></a>
                         </div>
                         <div class="app-item dropdown">
                             <a href="#" class="dropdown-toggle" role="button" id="dropdownMenuLink"

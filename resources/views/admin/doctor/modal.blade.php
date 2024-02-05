@@ -3,7 +3,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Doctor information</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Info Docteur</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -11,17 +11,17 @@
             <div class="modal-body">
                 <p><img src="{{ asset('images') }}/{{ $user->image }}" class="table-user-thumb" alt="" width="200"></p>
                 <p class="badge badge-pill badge-dark">Role: {{ $user->role->name }}</p>
-                <p>Gender: {{ $user->gender }}</p>
-                <p>Name: {{ $user->name }}</p>
+                <p>Genre: {{ $user->gender }}</p>
+                <p>Nom: {{ $user->name }}</p>
                 <p>Email: {{ $user->email }}</p>
-                <p>Address: {{ $user->address }}</p>
-                <p>Phone number: {{ $user->phone_number }}</p>
-                <p>Department: {{ $user->department }}</p>
+                <p>Adresse: {{ $user->address }}</p>
+                <p>Telephone: {{ $user->phone_number }}</p>
+                <p>Departement: {{ $user->department }}</p>
                 <p>Education: {{ $user->education }}</p>
-                <p>About: {{ $user->description }}</p>
+                <p>A Propos: {{ $user->description }}</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Fermer</button>
 
             </div>
         </div>

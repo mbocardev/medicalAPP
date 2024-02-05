@@ -6,12 +6,12 @@
             <div class="col-md-3">
                 <div class="card">
                     <div class="card-body text-center">
-                        <h4>Doctor Information</h4>
+                        <h4>Informations du Docteur</h4>
                         <img src="{{ asset('images') }}/{{ $user->image }}" width="100px" style="border-radius: 50%;">
                         <br>
-                        <p class="lead"> Name: {{ ucfirst($user->name) }}</p>
-                        <p class="lead"> Degree: {{ $user->education }}</p>
-                        <p class="lead"> Specialist: {{ $user->department }}</p>
+                        <p class="lead"> Nom: {{ ucfirst($user->name) }}</p>
+                        <p class="lead"> Grade: {{ $user->education }}</p>
+                        <p class="lead"> Specialité ou Departement: {{ $user->department }}</p>
                     </div>
                 </div>
 
@@ -35,7 +35,7 @@
 
                 <form action="{{ route('book.appointment') }}" method="post">@csrf
                     <div class="card">
-                        <div class="card-header lead">Appointment Date: {{ $date }}</div>
+                        <div class="card-header lead">Date de Rendez-Vous: {{ $date }}</div>
                         <div class="card-body">
                             <div class="row">
                                 @foreach ($times as $time)
@@ -57,11 +57,11 @@
 
                     <div class="card-footer">
                         @if (Auth::check())
-                            <button type="submit" class="btn btn-primary">Book Appointment</button>
+                            <button type="submit" class="btn btn-primary">Reserver</button>
                         @else
-                            <p>Please login to make an appointment</p>
-                            <a class="btn btn-success" href="/register">Register</a>
-                            <a class="btn btn-primary" href="/login">Login</a>
+                            <p>Connectez-Vous pour prendre Rendez-Vous</p>
+                            <a class="btn btn-success" href="/register">Inscription</a>
+                            <a class="btn btn-primary" href="/login">Connexion</a>
                         @endif
                     </div>
 

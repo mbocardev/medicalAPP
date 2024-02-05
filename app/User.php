@@ -49,4 +49,5 @@ class User extends Authenticatable
         $image->move($destination, $name);
         return $name;
     }
+    
 }

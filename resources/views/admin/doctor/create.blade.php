@@ -8,8 +8,8 @@
                 <div class="page-header-title">
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
-                        <h5>Doctors</h5>
-                        <span>add doctor</span>
+                        <h5>Docteurs</h5>
+                        <span>Ajouter Docteur</span>
                     </div>
                 </div>
             </div>
@@ -19,8 +19,8 @@
                         <li class="breadcrumb-item">
                             <a href="../index.html"><i class="ik ik-home"></i></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="#">Doctor</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Create</li>
+                        <li class="breadcrumb-item"><a href="#">Docteur</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Créer</li>
                     </ol>
                 </nav>
             </div>
@@ -37,14 +37,14 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>Add doctor</h3>
+                    <h3>Ajouter docteur</h3>
                 </div>
                 <div class="card-body">
                     <form class="forms-sample" action="{{ route('doctor.store') }}" method="post"
                         enctype="multipart/form-data">@csrf
                         <div class="row">
                             <div class="col-lg-6">
-                                <label for="">Full name</label>
+                                <label for="">Nom Complet</label>
                                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
                                     value="{{ old('name') }}">
                                 @error('name')
@@ -67,7 +67,7 @@
 
                         <div class="row">
                             <div class="col-lg-6">
-                                <label for="">Password</label>
+                                <label for="">Mot de Passe</label>
                                 <input type="password" name="password"
                                     class="form-control @error('password') is-invalid @enderror">
                                 @error('password')
@@ -77,11 +77,11 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6">
-                                <label for="">Gender</label>
+                                <label for="">Genrer</label>
                                 <select class="form-control @error('gender') is-invalid @enderror" name="gender">
-                                    <option value="">select</option>
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
+                                    <option value="">Choisir</option>
+                                    <option value="male">Masculin</option>
+                                    <option value="female">Feminin</option>
                                 </select>
                                 @error('gender')
                                 <span class="invalid-feedback" role="alert">
@@ -104,7 +104,7 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6">
-                                <label for="">Address</label>
+                                <label for="">Adresse</label>
                                 <input type="text" name="address"
                                     class="form-control @error('address') is-invalid @enderror"
                                     value="{{ old('address') }}">
@@ -119,7 +119,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Specialist</label>
+                                    <label for="">Specialité</label>
 
                                     <input type="text" name="department"
                                         class="form-control @error('department') is-invalid @enderror"
@@ -137,7 +137,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Phone number</label>
+                                    <label for="">Téléphone</label>
                                     <input type="text" name="phone_number"
                                         class="form-control @error('phone_number') is-invalid @enderror"
                                         value="{{ old('phone_number') }}">
@@ -171,7 +171,7 @@
                             <div class="col-md-6">
                                 <label>Role</label>
                                 <select name="role_id" class="form-control @error('role_id') is-invalid @enderror">
-                                    <option value="">Please select a role</option>
+                                    <option value="">Choisir un role</option>
                                     @foreach (App\Role::where('name', '!=', 'patient')->get() as $role)
                                         <option value="{{ $role->id }}">{{ $role->name }}</option>
                                     @endforeach
@@ -189,7 +189,7 @@
 
 
                         <div class="form-group">
-                            <label for="exampleTextarea1">About</label>
+                            <label for="exampleTextarea1">A Propos</label>
                             <textarea class="form-control @error('description') is-invalid @enderror" id="exampleTextarea1"
                                 rows="4" name="description">{{ old('description') }}
                             </textarea>
@@ -199,8 +199,8 @@
                             </span>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                        <button class="btn btn-light">Cancel</button>
+                        <button type="submit" class="btn btn-primary mr-2">Soumettre</button>
+                        <button class="btn btn-light">Annuler</button>
 
 
                     </form>

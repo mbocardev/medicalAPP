@@ -8,8 +8,8 @@
                 <div class="page-header-title">
                     <i class="ik ik-command bg-blue"></i>
                     <div class="d-inline">
-                        <h5>Department</h5>
-                        <span>Add A Department for Doctor's Specialty</span>
+                        <h5>Departement</h5>
+                        <span>Ajouter un departement</span>
                     </div>
                 </div>
             </div>
@@ -19,8 +19,8 @@
                         <li class="breadcrumb-item">
                             <a href="../index.html"><i class="ik ik-home"></i></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="#">Department</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Create</li>
+                        <li class="breadcrumb-item"><a href="#">Departement</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Créer</li>
                     </ol>
                 </nav>
             </div>
@@ -37,13 +37,13 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>Add Department</h3>
+                    <h3>Ajouter Departement</h3>
                 </div>
                 <div class="card-body">
                     <form class="forms-sample" action="{{ route('department.store') }}" method="post">@csrf
 
                         <div class="form-group">
-                            <label for="">Department Name</label>
+                            <label for="">Nom Departement </label>
                             <input type="text" name="department"
                                 class="form-control @error('department') is-invalid @enderror"
                                 value="{{ old('department') }}">
@@ -55,7 +55,7 @@
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-primary">Soumettre</button>
                         </div>
 
                     </form>

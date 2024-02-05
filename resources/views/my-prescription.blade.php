@@ -5,17 +5,17 @@
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">My prescriptions: {{ $prescriptions->count() }}</div>
+                    <div class="card-header">Mes prescriptions: {{ $prescriptions->count() }}</div>
                     <div class="card-body table-responsive-md">
                         <table class="table table-striped">
                             <thead>
                                 <tr>
                                     <th scope="col">Date</th>
-                                    <th scope="col">Doctor</th>
-                                    <th scope="col">Disease</th>
-                                    <th scope="col">Symptoms</th>
+                                    <th scope="col">Docteur</th>
+                                    <th scope="col">Maladie</th>
+                                    <th scope="col">Symptomes</th>
                                     <th scope="col">Medicines</th>
-                                    <th scope="col">Usage Instruction</th>
+                                    <th scope="col">Instruction d'Usage </th>
                                     <th scope="col">Doctor's Feedback</th>
                                 </tr>
                             </thead>
@@ -31,7 +31,7 @@
                                         <td>{{ $prescription->feedback }}</td>
                                     </tr>
                                 @empty
-                                    <td>You have no prescriptions</td>
+                                    <td>Vous n'avez pas de prescriptions</td>
                                 @endforelse
 
                             </tbody>

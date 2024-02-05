@@ -44,7 +44,7 @@ class FrontEndController extends Controller
         $request->validate(['time' => 'required']);
         $check = $this->checkBookingTimeInterval();
         if ($check) {
-            return redirect()->back()->with('errMessage', 'You already made an appointment. Please check your email for the appointment!');
+            return redirect()->back()->with('errMessage', 'Déja un rendez-vous. Verifier votre mail!');
         }
 
         $doctorId = $request->doctorId;
@@ -73,7 +73,7 @@ class FrontEndController extends Controller
         } catch (\Exception $e) {
         }
 
-        return redirect()->back()->with('message', 'Your appointment was booked for ' . $date . ' at ' . $time . ' with ' . $doctor->name . '.');
+        return redirect()->back()->with('message', 'Votre rendez-vous a été reservé pour le ' . $date . ' à ' . $time . ' avec ' . $doctor->name . '.');
     }
 
     // check if user already make a booking.

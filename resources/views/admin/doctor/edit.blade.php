@@ -8,8 +8,8 @@
                 <div class="page-header-title">
                     <i class="ik ik-edit bg-blue"></i>
                     <div class="d-inline">
-                        <h5>Doctors</h5>
-                        <span>Update doctor</span>
+                        <h5>Docteurs</h5>
+                        <span>Mettre à Jour</span>
                     </div>
                 </div>
             </div>
@@ -19,8 +19,8 @@
                         <li class="breadcrumb-item">
                             <a href="../index.html"><i class="ik ik-home"></i></a>
                         </li>
-                        <li class="breadcrumb-item"><a href="#">Doctor</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Update</li>
+                        <li class="breadcrumb-item"><a href="#">Docteur</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Mettre à Jour</li>
                     </ol>
                 </nav>
             </div>
@@ -37,7 +37,7 @@
 
             <div class="card">
                 <div class="card-header">
-                    <h3>Add doctor</h3>
+                    <h3>Ajouter Docteur</h3>
                 </div>
                 <div class="card-body">
                     <form class="forms-sample" action="{{ route('doctor.update', [$user->id]) }}" method="post"
@@ -45,7 +45,7 @@
                         @method('PUT')
                         <div class="row">
                             <div class="col-lg-6">
-                                <label for="">Full name</label>
+                                <label for="">Nom Complet</label>
                                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror"
                                     value="{{ $user->name }}">
                                 @error('name')
@@ -68,7 +68,7 @@
 
                         <div class="row">
                             <div class="col-lg-6">
-                                <label for="">Password</label>
+                                <label for="">Mot de passe</label>
                                 <input type="password" name="password"
                                     class="form-control @error('password') is-invalid @enderror">
                                 @error('password')
@@ -78,7 +78,7 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6">
-                                <label for="">Gender</label>
+                                <label for="">Genre</label>
                                 <select class="form-control @error('gender') is-invalid @enderror" name="gender">
                                     @foreach (['male', 'female'] as $gender)
                                         <option value="{{ $gender }}" @if ($user->gender == $gender)selected
@@ -106,7 +106,7 @@
                                 @enderror
                             </div>
                             <div class="col-lg-6">
-                                <label for="">Address</label>
+                                <label for="">Adresse</label>
                                 <input type="text" name="address"
                                     class="form-control @error('address') is-invalid @enderror"
                                     value="{{ $user->address }}">
@@ -121,7 +121,7 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Specialist</label>
+                                    <label for="">Specialité</label>
                                     <input type="text" name="department"
                                         class="form-control @error('department') is-invalid @enderror"
                                         value="{{ $user->department }}">
@@ -136,7 +136,7 @@
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="">Phone number</label>
+                                    <label for="">Téléphone</label>
                                     <input type="text" name="phone_number"
                                         class="form-control @error('phone_number') is-invalid @enderror"
                                         value="{{ $user->phone_number }}">
@@ -170,7 +170,7 @@
                             <div class="col-md-6">
                                 <label>Role</label>
                                 <select name="role_id" class="form-control @error('role_id') is-invalid @enderror">
-                                    <option value="">Please select role</option>
+                                    <option value="">Choisir un role</option>
                                     @foreach (App\Role::where('name', '!=', 'patient')->get() as $role)
                                         <option value="{{ $role->id }}" @if ($user->role_id == $role->id)selected
                                     @endif>{{ $role->name }}</option>
@@ -185,7 +185,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="exampleTextarea1">About</label>
+                            <label for="exampleTextarea1">A Propos</label>
                             <textarea class="form-control @error('description') is-invalid @enderror" id="exampleTextarea1"
                                 rows="4" name="description">{{ $user->description }}
                             </textarea>
@@ -195,8 +195,8 @@
                             </span>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                        <button class="btn btn-light">Cancel</button>
+                        <button type="submit" class="btn btn-primary mr-2">Soumettre</button>
+                        <button class="btn btn-light">Annuler</button>
 
                     </form>
                 </div>

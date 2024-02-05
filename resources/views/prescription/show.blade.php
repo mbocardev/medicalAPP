@@ -10,13 +10,13 @@
                     <div class="card-body table-responsive-md">
                         <p>Date: {{ $prescription->date }}</p>
                         <p>Patient: {{ $prescription->user->name }}</p>
-                        <p>Doctor: {{ $prescription->doctor->name }}</p>
-                        <p>Disease: {{ $prescription->name_of_disease }}</p>
-                        <p>Symptoms: {{ $prescription->symptoms }}</p>
-                        <p>Medicine: {{ $prescription->medicine }}</p>
-                        <p>Usage Instruction: {{ $prescription->usage_instruction }}</p>
-                        <p>Feedback: {{ $prescription->feedback }}</p>
-                        <p>Doctor signature:{{ $prescription->signature }}</p>
+                        <p>Docteur: {{ $prescription->doctor->name }}</p>
+                        <p>Maladiee: {{ $prescription->name_of_disease }}</p>
+                        <p>Symptomes: {{ $prescription->symptoms }}</p>
+                        <p>Medicines: {{ $prescription->medicine }}</p>
+                        <p>Instruction d'Usage: {{ $prescription->usage_instruction }}</p>
+                        <p>Retour: {{ $prescription->feedback }}</p>
+                        <p>Signature Docteur:{{ $prescription->signature }}</p>
                     </div>
                 </div>
             </div>
